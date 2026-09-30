@@ -233,18 +233,69 @@ body {
     white-space: nowrap;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     p {
         font-size: 14px;
     }
-    .content {
-        flex-direction: column;
-        gap: 2em;
-        
+
+    /* Navbar */
+    nav {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        border-radius: 30px;
+        padding: 0.8em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
     }
+
+    nav a {
+        width: auto;
+        margin: 0;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .about nav {
+        margin: 0 20px;
+        max-width: calc(100% - 40px);
+    }
+
+    /* Header & Home */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .home {
+        padding: 0 20px;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+
+    .home h3 {
+        font-size: 20px;
+    }
+
+    /* Introduction */
     .introduction {
         flex-direction: column;
-        gap: 2em;
+        align-items: center;
+        gap: 1.5em;
         padding: 30px 20px;
     }
 
@@ -254,23 +305,65 @@ body {
 
     .foto-pribadi {
         width: 100%;
-        max-width: 300px;
-        margin-left: 75px;
+        max-width: 250px;
+        margin: 0 auto;
+        display: block;
     }
 
-    .header {
+    /* Content */
+    .content {
         flex-direction: column;
-        gap: 15px;
-        padding: 15px;
+        gap: 2em;
+        padding: 30px 20px;
     }
 
-    .home {
-        padding-left: 0;
+    .p {
+        white-space: normal;
     }
 
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+    /* Skill */
+    .skill {
+        padding: 20px 15px;
     }
-} 
+
+    .skill-content img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Contact */
+    .contact {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        box-sizing: border-box;
+        margin: 0 auto;
+        border-radius: 60px 60px 0 0;
+    }
+
+    .contact-image {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Layar HP kecil (Android biasa) */
+@media (max-width: 480px) {
+    .project-content {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .skill-content {
+        gap: 12px;
+    }
+
+    .skill-content article h3 {
+        font-size: 15px;
+    }
+}
